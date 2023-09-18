@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        
+        <input type="submit" value="Login">
+    </form>
+
+    <script>
+        function validateForm() {
+            // Define the correct email and password
+            const correctEmail = "user@example.com";
+            const correctPassword = "password123";
+
+            // Get user input
+            const enteredEmail = document.getElementById("email").value;
+            const enteredPassword = document.getElementById("password").value;
+
+            // Check if email and password match
+            if (enteredEmail === correctEmail && enteredPassword === correctPassword) {
+                // Redirect to the next page
+                window.location.href = "file:///C:/Users/HP/Documents/abii/ip/news1.html";
+                return false; // Prevent form submission
+            } else {
+                // Display an alert if login fails
+                alert("Incorrect email or password. Please try again.");
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
